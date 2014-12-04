@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: YAWIK\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-12-04 20:32+0100\n"
-"PO-Revision-Date: 2014-12-04 19:40+0000\n"
+"PO-Revision-Date: 2014-12-04 19:38+0000\n"
 "Last-Translator: Carsten Bleek <cbleek@yawik.org>\n"
-"Language-Team: Turkish (http://www.transifex.com/projects/p/yawik/language/tr/)\n"
+"Language-Team: Chinese (Mandarin) (http://www.transifex.com/projects/p/yawik/language/cmn/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: tr\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Language: cmn\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: view/iframe/iFrame.phtml:2
 msgid "Job details"
@@ -33,7 +33,7 @@ msgstr ""
 
 #: view/form/list-filter.phtml:65
 msgid "Search"
-msgstr "Arama"
+msgstr ""
 
 #: view/sidebar/index.phtml:14
 msgid "My jobs"
@@ -78,11 +78,11 @@ msgstr ""
 
 #: view/jobs/index/index.ajax.phtml:19 view/jobs/index/dashboard.phtml:11
 msgid "Applications"
-msgstr "Uygulamalar"
+msgstr ""
 
 #: view/jobs/index/index.ajax.phtml:20
 msgid "Status"
-msgstr "Durum"
+msgstr ""
 
 #: view/jobs/index/index.ajax.phtml:21 view/jobs/index/index.ajax.phtml:23
 msgid "Action"
@@ -102,7 +102,7 @@ msgstr ""
 
 #: view/jobs/index/index.ajax.phtml:89 view/jobs/index/view.phtml:18
 msgid "Apply"
-msgstr "Uygulamak"
+msgstr ""
 
 #: view/jobs/index/dashboard.phtml:3
 msgid "Current Jobs"
@@ -114,11 +114,11 @@ msgstr ""
 
 #: view/jobs/index/dashboard.phtml:8
 msgid "Job"
-msgstr "Iş"
+msgstr ""
 
 #: view/jobs/index/dashboard.phtml:9
 msgid "Date"
-msgstr "Tarih"
+msgstr ""
 
 #: view/jobs/index/view.phtml:15
 msgid "Online since"
@@ -154,7 +154,7 @@ msgstr ""
 
 #: view/jobs/manage/form.phtml:52
 msgid "Summary"
-msgstr "Özet"
+msgstr ""
 
 #: view/jobs/manage/form.phtml:61
 msgid ""
@@ -180,7 +180,7 @@ msgstr ""
 
 #: src/Jobs/Form/JobDescriptionFieldset.php:31
 msgid "Description"
-msgstr "Tanım"
+msgstr ""
 
 #: src/Jobs/Form/JobEmployersFieldset.php:29
 msgid "Employers"
@@ -220,7 +220,7 @@ msgstr ""
 
 #: language/_annotated_strings.php:15
 msgid "Company"
-msgstr "Şirket"
+msgstr ""
 
 #: language/_annotated_strings.php:18 language/_annotated_strings.php:66
 msgid "Job title"
@@ -244,7 +244,7 @@ msgstr ""
 
 #: language/_annotated_strings.php:36
 msgid "Customize apply form"
-msgstr "Formu uygulamak özelleştirme"
+msgstr ""
 
 #: language/_annotated_strings.php:39
 msgid "Terms and conditions"
@@ -297,7 +297,7 @@ msgstr ""
 
 #: language/_annotated_strings.php:81
 msgid "Overview"
-msgstr "Genel bakış"
+msgstr ""
 
 #: language/_annotated_strings.php:84
 msgid "Create job"
