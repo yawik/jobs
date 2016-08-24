@@ -11,12 +11,26 @@ namespace Jobs\Auth\Dependency;
 
 use Zend\I18n\Translator\TranslatorInterface as Translator;
 use Auth\Entity\UserInterface as User;
-use Zend\Mvc\Router\RouteInterface as Router;
+use Zend\View\Renderer\PhpRenderer as View;
 use Auth\Dependency\ListInterface;
 use Auth\Dependency\ListItem;
+use Jobs\Repository\Job as Repository;
 
 class ListListener implements ListInterface
 {
+    
+    /**
+     * @var Repository
+     */
+    protected $repository;
+    
+    /**
+     * @param Repository $repository
+     */
+    public function __construct(Repository $repository)
+    {
+        $this->repository = $repository;
+    }
 
     public function __invoke()
     {
@@ -36,17 +50,28 @@ class ListListener implements ListInterface
      */
     public function getCount(User $user)
     {
-        return 2;
+        return $this->repository->getUserJobs($user->getId())->count();
     }
 
     /**
      * @see \Auth\Dependency\ListInterface::getItems()
      */
-    public function getItems(User $user, Router $router)
+    public function getItems(User $user, View $view, $limit)
     {
-        return [
-            new ListItem('First'),
-            new ListItem('Second', $router->assemble(['action' => 'edit'], ['name' => 'lang/jobs/manage', 'query' => ['id' => 'second']]))
-        ];
+        $items = [];
+        
+        foreach ($this->repository->getUserJobs($user->getId(), $limit) as $job) /* @var $job \Jobs\Entity\Job */
+        {
+            $title = $job->getTitle() ?: $view->translate('untitled');
+            $title .= ' ('. $view->dateFormat($job->getDateCreated(), 'short', 'none') . ')';
+            $url = $view->url('lang/jobs/manage', ['action' => 'edit'], [
+                'query' => [
+                    'id' => $job->getId()
+                ]
+            ]);
+            $items[] = new ListItem($title, $url);
+        }
+        
+        return $items;
     }
 }
